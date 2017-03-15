@@ -1,13 +1,17 @@
 'use strict';
 module.exports = function() {
-  //private
+
+//private
+  var secretNumber = createSecretNumber();
+
   function createSecretNumber(){
     return Math.floor(Math.random() * 1000000);
   }
-  var secretNumber = createSecretNumber();
-  //public
+
+//public
   function getSecretNumber(){
     return secretNumber;
   }
+
   return getSecretNumber;
 };
